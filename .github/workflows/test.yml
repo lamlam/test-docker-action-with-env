@@ -13,5 +13,5 @@ jobs:
       - name: show notify state
         run: echo "last job status is ${{ steps.testjob.outputs.shouldNotify }}"
       - name: exec notify if exist status
-        if: steps.testjob.outputs.shouldNotify == "true"
+        if: steps.testjob.outputs.shouldNotify == 'true'
         run: echo "should notify"
