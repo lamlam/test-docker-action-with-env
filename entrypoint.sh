@@ -2,4 +2,4 @@
 
 
 echo "job success yoooo"
-echo "::set-output name=shouldNotify::true"
+echo "::set-output name=shouldNotify::false"
