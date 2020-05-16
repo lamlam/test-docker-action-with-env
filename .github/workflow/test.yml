@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  exec_job_and_handle_notify_state:
+    runs-on: ubuntu-latest
+    name: exec job
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: test job
+        uses: ./
+        id: testjob
+      - name: notify
+        run: echo "last job status is ${{ steps.testjob.outputs.shouldNotify }}"

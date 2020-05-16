@@ -1,0 +1,8 @@
+name: "Hello World"
+description: "Greet someone and record the time"
+outputs:
+  shouldNotify:
+    description: "If it is true, should notify"
+runs:
+  using: "docker"
+  image: "Dockerfile"
